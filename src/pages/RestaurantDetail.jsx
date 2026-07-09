@@ -36,7 +36,7 @@ export default function RestaurantDetail() {
       {/* Top bar */}
       <div className="sticky top-0 z-50 flex items-center justify-between px-6 md:px-10 py-4 border-b" style={{ background: "rgba(13,13,13,0.95)", borderColor: "#333", backdropFilter: "blur(10px)" }}>
         <Link to="/" className="label-mono hover:text-cayenne transition-colors" style={{ color: "rgba(242,232,207,0.7)" }}>
-          ← THE HEAT MAP
+          ← HEAT MAP NASHVILLE
         </Link>
         <span className="label-mono hidden sm:inline" style={{ color: "#FF4D00" }}>
           № {String(restaurant.rank).padStart(2, "0")} / 07

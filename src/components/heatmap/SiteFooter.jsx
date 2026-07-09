@@ -7,10 +7,10 @@ export default function SiteFooter() {
         {/* Brand */}
         <div>
           <h3 className="display-large leading-none" style={{ color: "#F2E8CF" }}>
-            THE<br/><span style={{ color: "#FF4D00" }}>HEAT</span><br/>MAP
+            HEAT<br/><span style={{ color: "#FF4D00" }}>MAP</span><br/>NASHVILLE
           </h3>
-          <p className="mt-4 text-sm max-w-xs" style={{ color: "rgba(242,232,207,0.5)" }}>
-            A scorched archive of Nashville's cast-iron legacy. Built for the heat-seekers.
+          <p className="label-mono mt-4 max-w-xs" style={{ color: "rgba(242,232,207,0.5)" }}>
+            A Nashvillian's guide to hot chicken
           </p>
         </div>
 
@@ -46,7 +46,7 @@ export default function SiteFooter() {
       {/* Bottom bar */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 border-t" style={{ borderColor: "#333" }}>
         <span className="label-mono" style={{ color: "rgba(242,232,207,0.4)" }}>
-          © {new Date().getFullYear()} THE HEAT MAP · NASHVILLE
+          © {new Date().getFullYear()} HEAT MAP NASHVILLE
         </span>
         <span className="label-mono" style={{ color: "rgba(242,232,207,0.4)" }}>
           BUILT ON GREASE & FIRE

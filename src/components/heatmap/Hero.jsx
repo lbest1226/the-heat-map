@@ -50,7 +50,7 @@ export default function Hero({ onExplore }) {
       {/* Top metadata bar */}
       <div className="relative z-20 flex items-center justify-between px-6 md:px-16 pt-8">
         <span className="label-mono" style={{ color: "#F2E8CF" }}>
-          THE HEAT MAP
+          HEAT MAP NASHVILLE
         </span>
         <span className="label-mono hidden md:inline" style={{ color: "rgba(242,232,207,0.5)" }}>
           NASHVILLE · 36.1627°N 86.7816°W
@@ -67,12 +67,12 @@ export default function Hero({ onExplore }) {
             01 / IGNITION
           </span>
           <h1 className="display-mega" style={{ color: "#F2E8CF" }}>
-            THE
+            HEAT
           </h1>
         </div>
         <div className="flex justify-end items-end gap-4 mt-auto">
           <h1 className="display-mega" style={{ color: "#F2E8CF", WebkitTextStroke: "2px #FF4D00", color: "transparent" }}>
-            HEAT
+            MAP
           </h1>
         </div>
       </div>
@@ -84,8 +84,11 @@ export default function Hero({ onExplore }) {
             ↓ SCROLL TO IGNITE
           </span>
           <h2 className="display-large" style={{ color: "#FF4D00" }}>
-            MAP
+            NASHVILLE
           </h2>
+          <p className="label-mono mt-3 max-w-xs" style={{ color: "rgba(242,232,207,0.5)" }}>
+            A Nashvillian's guide to hot chicken
+          </p>
         </div>
 
         <button
