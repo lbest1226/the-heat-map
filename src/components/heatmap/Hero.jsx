@@ -1,7 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { HERO_IMAGE } from "@/data/restaurants";
 
+const TARGET = "HEATMAP";
+
 export default function Hero({ onExplore }) {
+  const [typed, setTyped] = useState("");
+
+  useEffect(() => {
+    let i = 0;
+    let id;
+    const start = setTimeout(() => {
+      id = setInterval(() => {
+        i += 1;
+        setTyped(TARGET.slice(0, i));
+        if (i >= TARGET.length) clearInterval(id);
+      }, 120);
+    }, 400);
+    return () => {
+      clearTimeout(start);
+      clearInterval(id);
+    };
+  }, []);
+
+  const line1 = typed.slice(0, 4);
+  const line2 = typed.slice(4);
+  const done = typed.length >= TARGET.length;
+  const caret1 = !done && typed.length < 4;
+  const caret2 = !done && typed.length >= 4;
+
   return (
     <section className="relative min-h-screen w-full overflow-hidden flex flex-col justify-between" style={{ background: "#0D0D0D" }}>
       {/* Background image */}
@@ -34,10 +60,12 @@ export default function Hero({ onExplore }) {
           01 / IGNITION
         </span>
         <h1 className="display-mega" style={{ color: "#F2E8CF" }}>
-          HEAT
+          {line1}
+          {caret1 && <span className="caret" style={{ background: "#F2E8CF" }} />}
         </h1>
-        <h1 className="display-mega mx-auto" style={{ color: "#F2E8CF", WebkitTextStroke: "2px #FF4D00", color: "transparent" }}>
-          MAP
+        <h1 className="display-mega mx-auto" style={{ WebkitTextStroke: "2px #FF4D00", color: "transparent" }}>
+          {line2}
+          {caret2 && <span className="caret" style={{ background: "#FF4D00" }} />}
         </h1>
       </div>
 
