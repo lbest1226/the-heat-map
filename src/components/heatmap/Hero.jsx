@@ -61,26 +61,18 @@ export default function Hero({ onExplore }) {
 
         <button
           onClick={onExplore}
-          className="group relative flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full border-2 transition-all duration-200 hover:scale-105"
+          className="w-full md:w-auto flex items-center justify-center gap-3 rounded-2xl px-10 md:px-14 py-5 md:py-6 transition-all duration-200 hover:brightness-110 hover:-translate-y-0.5"
           style={{
-            borderColor: "#FF4D00",
-            background: "rgba(13,13,13,0.5)",
+            background: "#FF4D00",
+            color: "#0D0D0D",
+            boxShadow: "0 0 24px rgba(255,77,0,0.35)",
           }}
-          aria-label="Explore the Scoville scale"
+          aria-label="Locate the heat"
         >
-          <span className="absolute inset-0 rounded-full perforated opacity-30" />
-          <span className="flex flex-col items-center text-center px-2">
-            <span className="label-mono" style={{ color: "#FF4D00" }}>
-              EXPLORE
-            </span>
-            <span className="label-mono text-[0.6rem] mt-1" style={{ color: "rgba(242,232,207,0.6)" }}>
-              THE SCOVILLE
-            </span>
+          <span className="font-display text-lg md:text-xl tracking-tight uppercase">
+            Locate the Heat
           </span>
-          {/* Rotating ring */}
-          <svg className="absolute inset-0 w-full h-full animate-spin" style={{ animationDuration: "12s" }} viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="48" fill="none" stroke="#FF4D00" strokeWidth="0.5" strokeDasharray="2 4" opacity="0.5" />
-          </svg>
+          <span className="text-2xl md:text-3xl leading-none" aria-hidden="true">🔥</span>
         </button>
       </div>
     </section>
