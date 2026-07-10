@@ -23,9 +23,9 @@ export default function Hero({ onExplore }) {
         <span className="label-mono hidden md:inline" style={{ color: "rgba(242,232,207,0.5)" }}>
           NASHVILLE · 36.1627°N 86.7816°W
         </span>
-        <span className="label-mono hidden" style={{ color: "#FF4D00" }}>
-          EST. 1930
-        </span>
+        
+
+        
       </div>
 
       {/* Headline */}
