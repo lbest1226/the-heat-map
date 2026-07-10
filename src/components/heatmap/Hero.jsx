@@ -28,21 +28,17 @@ export default function Hero({ onExplore }) {
         </span>
       </div>
 
-      {/* Split headline */}
+      {/* Headline */}
       <div className="relative z-20 px-6 md:px-16 lg:px-20 flex-1 flex flex-col justify-center py-16">
-        <div className="flex items-start gap-4">
-          <span className="label-mono mt-4 hidden sm:block" style={{ color: "rgba(242,232,207,0.4)" }}>
-            01 / IGNITION
-          </span>
-          <h1 className="display-mega" style={{ color: "#F2E8CF" }}>
-            HEAT
-          </h1>
-        </div>
-        <div className="flex justify-end items-end gap-4 mt-auto">
-          <h1 className="display-mega" style={{ color: "#F2E8CF", WebkitTextStroke: "2px #FF4D00", color: "transparent" }}>
-            MAP
-          </h1>
-        </div>
+        <span className="label-mono mb-3" style={{ color: "rgba(242,232,207,0.4)" }}>
+          01 / IGNITION
+        </span>
+        <h1 className="display-mega" style={{ color: "#F2E8CF" }}>
+          HEAT
+        </h1>
+        <h1 className="display-mega" style={{ color: "#F2E8CF", WebkitTextStroke: "2px #FF4D00", color: "transparent" }}>
+          MAP
+        </h1>
       </div>
 
       {/* Bottom row: MAP + magnetic explore button */}
