@@ -3,23 +3,23 @@ import { Link } from "react-router-dom";
 import { heatLevelToLabel } from "@/data/restaurants";
 
 export default function RestaurantCard({ restaurant, index }) {
-  const heatPct = (restaurant.heat_level / 10) * 100;
+  const heatPct = restaurant.heat_level / 10 * 100;
 
   return (
     <Link
       to={`/spot/${restaurant.rank}`}
       className="group block relative overflow-hidden transition-all duration-500 hover:-translate-y-1"
-      style={{ background: "rgba(13,13,13,0.6)", border: "1px solid #333" }}
-    >
+      style={{ background: "rgba(13,13,13,0.6)", border: "1px solid #333" }}>
+      
       {/* Image */}
       <div className="relative aspect-[4/5] overflow-hidden">
         <img
           src={restaurant.image_url}
           alt={`${restaurant.name} signature dish`}
           className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:saturate-50"
-          style={{ filter: "brightness(0.85) contrast(1.1)" }}
-        />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, transparent 40%, rgba(13,13,13,0.95) 100%)" }} />
+          style={{ filter: "brightness(0.85) contrast(1.1)" }} />
+        
+        <div className="absolute inset-0 hidden" style={{ background: "linear-gradient(180deg, transparent 40%, rgba(13,13,13,0.95) 100%)" }} />
 
         {/* Rank number */}
         <span className="absolute top-4 left-4 label-mono" style={{ color: "rgba(242,232,207,0.6)" }}>
@@ -40,8 +40,8 @@ export default function RestaurantCard({ restaurant, index }) {
         <div className="absolute bottom-0 left-0 right-0 h-1" style={{ background: "#333" }}>
           <div
             className="h-full transition-all duration-500 group-hover:brightness-125"
-            style={{ width: `${heatPct}%`, background: "linear-gradient(90deg, #F2E8CF, #FF4D00)" }}
-          />
+            style={{ width: `${heatPct}%`, background: "linear-gradient(90deg, #F2E8CF, #FF4D00)" }} />
+          
         </div>
       </div>
 
@@ -68,6 +68,6 @@ export default function RestaurantCard({ restaurant, index }) {
           </span>
         </div>
       </div>
-    </Link>
-  );
+    </Link>);
+
 }
