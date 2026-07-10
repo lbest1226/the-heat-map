@@ -19,7 +19,7 @@ export default function RestaurantCard({ restaurant, index }) {
           className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:saturate-50"
           style={{ filter: "brightness(0.85) contrast(1.1)" }} />
         
-        <div className="absolute inset-0 hidden" style={{ background: "linear-gradient(180deg, transparent 40%, rgba(13,13,13,0.95) 100%)" }} />
+        
 
         {/* Rank number */}
         <span className="absolute top-4 left-4 label-mono" style={{ color: "rgba(242,232,207,0.6)" }}>
