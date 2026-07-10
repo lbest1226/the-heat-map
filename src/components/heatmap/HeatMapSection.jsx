@@ -9,7 +9,7 @@ delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
   iconRetinaUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
-  shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+  shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png"
 });
 
 function customIcon(heat) {
@@ -22,7 +22,7 @@ function customIcon(heat) {
       box-shadow:0 0 ${heat * 2}px rgba(255,77,0,0.8);
     "></div>`,
     iconSize: [size, size],
-    iconAnchor: [size / 2, size / 2],
+    iconAnchor: [size / 2, size / 2]
   });
 }
 
@@ -33,7 +33,7 @@ export default function HeatMapSection() {
   return (
     <section id="map" className="relative" style={{ background: "#0D0D0D" }}>
       {/* Header */}
-      <div className="py-20 md:py-24 px-6 md:px-16 lg:px-24">
+      <div className="py-20 md:py-24 px-6 md:px-16 lg:px-24 hidden">
         <div className="flex items-baseline gap-4 mb-4">
           <span className="label-mono" style={{ color: "#FF4D00" }}>
             04 / FINAL DESTINATION
@@ -49,24 +49,24 @@ export default function HeatMapSection() {
       </div>
 
       {/* Map */}
-      <div className="relative h-[60vh] md:h-[70vh] w-full" style={{ borderTop: "1px solid #333" }}>
+      <div className="relative h-[60vh] md:h-[70vh] w-full hidden" style={{ borderTop: "1px solid #333" }}>
         <MapContainer
           center={[36.175, -86.74]}
           zoom={12}
           className="w-full h-full"
-          style={{ background: "#0D0D0D" }}
-        >
+          style={{ background: "#0D0D0D" }}>
+          
           <TileLayer
             url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-            attribution=""
-          />
-          {RESTAURANTS.map((r) => (
-            <Marker
-              key={r.rank}
-              position={[r.lat, r.lng]}
-              icon={customIcon(r.heat_level)}
-              eventHandlers={{ click: () => setSelected(r) }}
-            >
+            attribution="" />
+          
+          {RESTAURANTS.map((r) =>
+          <Marker
+            key={r.rank}
+            position={[r.lat, r.lng]}
+            icon={customIcon(r.heat_level)}
+            eventHandlers={{ click: () => setSelected(r) }}>
+            
               <Popup>
                 <div style={{ minWidth: "160px" }}>
                   <div style={{ color: "#FF4D00", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase" }}>
@@ -79,23 +79,23 @@ export default function HeatMapSection() {
                     {r.neighborhood}
                   </div>
                   <Link
-                    to={`/spot/${r.rank}`}
-                    style={{
-                      display: "inline-block",
-                      marginTop: "8px",
-                      color: "#FF4D00",
-                      fontSize: "0.7rem",
-                      letterSpacing: "0.1em",
-                      textTransform: "uppercase",
-                      textDecoration: "none",
-                    }}
-                  >
+                  to={`/spot/${r.rank}`}
+                  style={{
+                    display: "inline-block",
+                    marginTop: "8px",
+                    color: "#FF4D00",
+                    fontSize: "0.7rem",
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    textDecoration: "none"
+                  }}>
+                  
                     VIEW SPECS →
                   </Link>
                 </div>
               </Popup>
             </Marker>
-          ))}
+          )}
         </MapContainer>
 
         {/* Selected overlay */}
@@ -122,8 +122,8 @@ export default function HeatMapSection() {
         target="_blank"
         rel="noopener noreferrer"
         className="relative block w-full text-center py-6 md:py-8 cayenne-glow group"
-        style={{ background: "#FF4D00", color: "#0D0D0D" }}
-      >
+        style={{ background: "#FF4D00", color: "#0D0D0D" }}>
+        
         <div className="absolute inset-0 perforated opacity-10" />
         <span className="font-display text-xl md:text-3xl tracking-tight relative">
           GET DIRECTIONS →
@@ -132,6 +132,6 @@ export default function HeatMapSection() {
           {selected.neighborhood.toUpperCase()} · {selected.wait_time.toUpperCase()}
         </span>
       </a>
-    </section>
-  );
+    </section>);
+
 }

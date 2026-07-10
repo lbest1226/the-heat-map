@@ -3,9 +3,9 @@ import { SCORCHED_BG } from "@/data/restaurants";
 
 export default function Manifesto() {
   return (
-    <section className="relative py-24 md:py-40 overflow-hidden" style={{ background: "#0D0D0D" }}>
+    <section className="relative py-24 md:py-40 overflow-hidden hidden" style={{ background: "#0D0D0D" }}>
       {/* Background texture */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-20 hidden">
         <img src={SCORCHED_BG} alt="" className="w-full h-full object-cover hidden" />
       </div>
 
@@ -22,7 +22,7 @@ export default function Manifesto() {
           </div>
 
           {/* Right: body */}
-          <div className="lg:col-span-7 lg:col-start-6 space-y-8">
+          <div className="lg:col-span-7 lg:col-start-6 space-y-8 hidden">
             <p className="text-2xl md:text-3xl font-light leading-snug hidden" style={{ color: "#F2E8CF" }}>
               In 1930, a woman scorned took her revenge with a jar of cayenne. She scorched a plate of fried chicken meant to punish — and instead birthed a legend.
             </p>
