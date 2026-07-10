@@ -5,6 +5,7 @@ import AtlasGrid from "@/components/heatmap/AtlasGrid";
 import Manifesto from "@/components/heatmap/Manifesto";
 import HeatMapSection from "@/components/heatmap/HeatMapSection";
 import SiteFooter from "@/components/heatmap/SiteFooter";
+import ConciergeChat from "@/components/heatmap/ConciergeChat";
 
 export default function Home() {
   const handleExplore = () => {
@@ -21,6 +22,7 @@ export default function Home() {
         <HeatMapSection />
         <SiteFooter />
       </div>
+      <ConciergeChat />
     </div>
   );
 }
