@@ -2,6 +2,7 @@ import React, { useState, useMemo } from "react";
 import ScovilleSlider from "./ScovilleSlider";
 import RestaurantCard from "./RestaurantCard";
 import { RESTAURANTS } from "@/data/restaurants";
+import MapBox from "./MapBox";
 
 export default function AtlasGrid() {
   const [heatValue, setHeatValue] = useState(1);
@@ -22,9 +23,7 @@ export default function AtlasGrid() {
           </span>
           <div className="flex-1 h-px" style={{ background: "#333" }} />
         </div>
-        <h2 className="display-large max-w-4xl" style={{ color: "#F2E8CF" }}>
-          FILTER THE FIRE
-        </h2>
+        <MapBox />
         <p className="mt-6 max-w-2xl text-lg" style={{ color: "rgba(242,232,207,0.7)" }}>
           Every Nashville hot chicken shrine, ranked by Scoville ferocity. Drag the axis to raise the floor — only the spots that meet your threshold survive.
         </p>
