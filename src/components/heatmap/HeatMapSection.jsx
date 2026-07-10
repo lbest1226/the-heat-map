@@ -121,14 +121,14 @@ export default function HeatMapSection() {
         href={directionsUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="relative block w-full text-center py-6 md:py-8 cayenne-glow group"
+        className="relative block w-full text-center py-6 md:py-8 cayenne-glow group hidden"
         style={{ background: "#FF4D00", color: "#0D0D0D" }}>
         
-        <div className="absolute inset-0 perforated opacity-10" />
+        <div className="absolute inset-0 perforated opacity-10 hidden" />
         <span className="font-display text-xl md:text-3xl tracking-tight relative">
           GET DIRECTIONS →
         </span>
-        <span className="label-mono block mt-1 relative opacity-70">
+        <span className="label-mono block mt-1 relative opacity-70 hidden">
           {selected.neighborhood.toUpperCase()} · {selected.wait_time.toUpperCase()}
         </span>
       </a>
