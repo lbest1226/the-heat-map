@@ -13,8 +13,7 @@ const SUGGESTIONS = [
   "What should I order at Hattie B's?",
 ];
 
-export default function ConciergeChat() {
-  const [open, setOpen] = useState(false);
+export default function ConciergeChat({ open, setOpen }) {
   const [conversation, setConversation] = useState(null);
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
@@ -36,7 +35,7 @@ export default function ConciergeChat() {
         if (!conv) {
           conv = await base44.agents.createConversation({
             agent_name: AGENT_NAME,
-            metadata: { name: "Heat Concierge", description: "Route planning & dining advice" },
+            metadata: { name: "Hot Chicken Assistant", description: "Route planning & dining advice" },
           });
         }
         if (cancelled) return;
@@ -103,11 +102,11 @@ export default function ConciergeChat() {
         onClick={() => setOpen((o) => !o)}
         className="fixed bottom-5 right-5 md:bottom-6 md:right-6 z-50 flex items-center gap-2.5 rounded-2xl px-4 md:px-5 py-3.5 cayenne-glow transition-transform hover:-translate-y-0.5"
         style={{ background: "#FF4D00", color: "#0D0D0D" }}
-        aria-label="Open the Heat Concierge"
+        aria-label="Open the Hot Chicken Assistant"
       >
         <Flame size={22} />
         <span className="font-display text-sm md:text-base tracking-tight uppercase leading-none">
-          {open ? "Close" : "Heat Concierge"}
+          {open ? "Close" : "Assistant"}
         </span>
       </button>
 
@@ -128,7 +127,7 @@ export default function ConciergeChat() {
               </span>
               <div className="leading-tight">
                 <div className="font-display text-sm uppercase tracking-tight" style={{ color: "#F2E8CF" }}>
-                  Heat Concierge
+                  Hot Chicken Assistant
                 </div>
                 <div className="label-mono text-[0.6rem]" style={{ color: "rgba(242,232,207,0.5)" }}>
                   ROUTE &amp; DINING ADVICE
@@ -171,7 +170,7 @@ export default function ConciergeChat() {
                 <div className="max-w-[90%]">
                   <div className="text-sm leading-relaxed" style={{ color: "#F2E8CF" }}>
                     <p className="my-1">
-                      Howdy — I&rsquo;m your <strong>Heat Concierge</strong>. Tell me where you are and how much burn
+                      Howdy — I&rsquo;m your <strong>Hot Chicken Assistant</strong>. Tell me where you are and how much burn
                       you can handle, and I&rsquo;ll route you to the right bird.
                     </p>
                     <p className="my-1" style={{ color: "rgba(242,232,207,0.6)" }}>
@@ -205,7 +204,7 @@ export default function ConciergeChat() {
                     >
                       <Loader2 size={14} className="animate-spin" style={{ color: "#FF4D00" }} />
                       <span className="label-mono text-[0.65rem]" style={{ color: "rgba(242,232,207,0.6)" }}>
-                        HEAT CONCIERGE IS THINKING
+                        ASSISTANT IS THINKING
                       </span>
                     </div>
                   </div>
