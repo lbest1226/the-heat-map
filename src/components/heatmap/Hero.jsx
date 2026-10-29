@@ -16,9 +16,9 @@ export default function Hero({ onTalk }) {
       
 
       <div className="relative z-20 px-6 max-w-5xl mx-auto text-center flex flex-col items-center">
-        <span className="label-mono mb-6 hidden" style={{ color: "#FF4D00", letterSpacing: "0.3em" }}>
-          01 / IGNITION
-        </span>
+        
+
+        
 
         <h1
           className="font-display leading-[0.95]"
