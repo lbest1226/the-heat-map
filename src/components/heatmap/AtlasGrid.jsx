@@ -7,7 +7,7 @@ export default function AtlasGrid() {
   const spots = [...RESTAURANTS].sort((a, b) => a.rank - b.rank);
 
   return (
-    <section id="atlas" className="relative py-24 md:py-32 px-6 md:px-16 lg:px-24" style={{ background: "#0D0D0D" }}>
+    <section id="atlas" className="relative py-24 md:py-32 px-6 md:px-16 lg:px-24" style={{ background: "transparent" }}>
       {/* Section header */}
       <div className="mb-16 md:mb-20">
         <div className="flex items-baseline gap-4 mb-4">

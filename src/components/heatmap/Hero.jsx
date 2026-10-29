@@ -31,15 +31,7 @@ export default function Hero({ onExplore }) {
   return (
     <section className="relative min-h-screen w-full overflow-hidden flex flex-col justify-between" style={{ background: "#0D0D0D" }}>
       {/* Background image */}
-      <div className="absolute inset-0">
-        <img
-          src={HERO_IMAGE}
-          alt="Nashville hot chicken wing glistening with cayenne oil"
-          className="w-full h-full object-cover"
-          style={{ filter: "brightness(0.45) contrast(1.2) saturate(1.2)" }} />
-        
-        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(13,13,13,0.6) 0%, rgba(13,13,13,0.3) 40%, rgba(13,13,13,0.85) 100%)" }} />
-      </div>
+      <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(13,13,13,0.55) 0%, rgba(13,13,13,0.32) 40%, rgba(13,13,13,0.88) 100%)" }} />
 
       {/* Top metadata bar */}
       <div className="relative z-20 flex items-center justify-between px-6 md:px-16 pt-8">

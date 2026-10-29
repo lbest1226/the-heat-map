@@ -22,6 +22,16 @@
     "heat_label": {
       "type": "string"
     },
+    "overall_flavor": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "smoke_level": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10
+    },
     "scoville_range": {
       "type": "string"
     },
@@ -43,6 +53,12 @@
     "image_url": {
       "type": "string"
     },
+    "photos": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "lat": {
       "type": "number"
     },
@@ -55,7 +71,6 @@
   },
   "required": [
     "name",
-    "neighborhood",
     "heat_level"
   ]
 }

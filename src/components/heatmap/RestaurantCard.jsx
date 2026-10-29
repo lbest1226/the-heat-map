@@ -56,8 +56,8 @@ export default function RestaurantCard({ restaurant, index }) {
         <div className="font-mono text-sm space-y-1" style={{ color: "rgba(242,232,207,0.5)" }}>
           <p>{restaurant.neighborhood.toUpperCase()}</p>
           <p className="flex items-center justify-between">
-            <span>{restaurant.scoville_range}</span>
-            <span>{restaurant.established}</span>
+            <span>FLAVOR {restaurant.overall_flavor}/10</span>
+            <span>SMOKE {restaurant.smoke_level}/10</span>
           </p>
         </div>
 
