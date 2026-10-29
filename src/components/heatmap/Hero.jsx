@@ -62,7 +62,7 @@ export default function Hero({ onExplore }) {
       </div>
 
       {/* Bottom row: MAP + magnetic explore button */}
-      <div className="relative z-20 px-6 md:px-16 lg:px-20 pb-12 flex flex-col md:flex-row items-start md:items-end justify-between gap-8">
+      <div className="relative z-20 px-6 md:px-16 lg:px-20 pb-12 flex flex-col md:flex-row items-start md:items-end justify-between gap-8 opacity-0">
         <div>
           <span className="label-mono block mb-2" style={{ color: "rgba(242,232,207,0.5)" }}>
             ↓ SCROLL TO IGNITE
