@@ -36,7 +36,7 @@ export default function Hero({ onTalk }) {
 
         <button
           onClick={onTalk}
-          className="mt-10 flex items-center justify-center gap-3 rounded-2xl px-8 md:px-12 py-4 md:py-5 cayenne-glow transition-all duration-200 hover:brightness-110 hover:-translate-y-0.5"
+          className="mt-10 flex items-center justify-center gap-3 rounded-2xl px-8 md:px-12 py-4 md:py-5 transition-all duration-200 hover:brightness-110 hover:-translate-y-0.5"
           style={{ background: "#FF4D00", color: "#0D0D0D", boxShadow: "0 0 24px rgba(255,77,0,0.35)" }}
           aria-label="Talk to the Hot Chicken Assistant">
           
