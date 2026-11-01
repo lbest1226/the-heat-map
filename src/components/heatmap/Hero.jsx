@@ -41,9 +41,9 @@ export default function Hero({ onTalk }) {
       </div>
 
       <div className="absolute bottom-6 left-0 right-0 text-center">
-        <span className="label-mono hidden" style={{ color: "rgba(242,232,207,0.4)" }}>
-          ↓ SCROLL TO EXPLORE
-        </span>
+        
+
+        
       </div>
     </section>);
 
