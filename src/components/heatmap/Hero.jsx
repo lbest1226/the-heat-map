@@ -24,7 +24,7 @@ export default function Hero({ onTalk }) {
           className="font-display leading-[0.95]"
           style={{ color: "#F2E8CF", fontSize: "clamp(2.25rem, 6vw, 5.5rem)", letterSpacing: "-0.03em" }}>
           
-          Heat Map Nashville
+          findHotChicken
         </h1>
 
         <p

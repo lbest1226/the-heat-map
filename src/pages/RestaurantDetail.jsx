@@ -28,7 +28,7 @@ export default function RestaurantDetail() {
       <div className="min-h-screen flex flex-col items-center justify-center px-6" style={{ background: "#0D0D0D" }}>
         <h1 className="display-large" style={{ color: "#FF4D00" }}>404°</h1>
         <p className="label-mono mt-4" style={{ color: "rgba(242,232,207,0.5)" }}>THIS SPOT BURNED DOWN OR NEVER EXISTED</p>
-        <Link to="/" className="mt-8 label-mono" style={{ color: "#FF4D00" }}>← BACK TO THE HEAT MAP</Link>
+        <Link to="/" className="mt-8 label-mono" style={{ color: "#FF4D00" }}>← BACK TO findHotChicken</Link>
       </div>
     );
   }
@@ -45,7 +45,7 @@ export default function RestaurantDetail() {
         style={{ background: "rgba(13,13,13,0.95)", borderColor: "#333", backdropFilter: "blur(10px)" }}
       >
         <Link to="/" className="label-mono hover:text-cayenne transition-colors" style={{ color: "rgba(242,232,207,0.7)" }}>
-          ← HEAT MAP NASHVILLE
+          ← findHotChicken
         </Link>
         <span className="label-mono hidden sm:inline" style={{ color: "#FF4D00" }}>
           № {String(restaurant.rank).padStart(2, "0")} / {String(RESTAURANTS.length).padStart(2, "0")}

@@ -74,7 +74,7 @@ export default function MapBox() {
         ))}
       </MapContainer>
       <span className="absolute top-3 right-3 z-[500] label-mono pointer-events-none" style={{ color: "rgba(242,232,207,0.6)" }}>
-        THE HEAT MAP · {RESTAURANTS.length} SPOTS
+        findHotChicken · {RESTAURANTS.length} SPOTS
       </span>
     </div>
   );

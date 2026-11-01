@@ -46,7 +46,7 @@ export default function SiteFooter() {
       {/* Bottom bar */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 border-t" style={{ borderColor: "#333" }}>
         <span className="label-mono" style={{ color: "rgba(242,232,207,0.4)" }}>
-          © {new Date().getFullYear()} HEAT MAP NASHVILLE
+          © {new Date().getFullYear()} findHotChicken
         </span>
         <span className="label-mono" style={{ color: "rgba(242,232,207,0.4)" }}>
           BUILT ON GREASE & FIRE
