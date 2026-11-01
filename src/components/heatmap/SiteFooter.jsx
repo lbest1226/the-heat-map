@@ -15,16 +15,16 @@ export default function SiteFooter() {
         </div>
 
         {/* Navigate */}
-        <div className="hidden">
-          <span className="label-mono block mb-4" style={{ color: "#FF4D00" }}>
-            NAVIGATE
-          </span>
-          <ul className="space-y-2">
-            <li><a href="#top" className="text-sm hover:text-cayenne transition-colors" style={{ color: "rgba(242,232,207,0.7)" }}>Ignition</a></li>
-            <li><a href="#atlas" className="text-sm hover:text-cayenne transition-colors" style={{ color: "rgba(242,232,207,0.7)" }}>Atlas of Heat</a></li>
-            <li><a href="#map" className="text-sm hover:text-cayenne transition-colors" style={{ color: "rgba(242,232,207,0.7)" }}>Final Destination</a></li>
-          </ul>
-        </div>
+        
+
+
+
+
+
+
+
+
+        
 
         {/* Contact */}
         <div>
@@ -33,9 +33,9 @@ export default function SiteFooter() {
           </span>
           <ul className="space-y-2 font-mono text-sm" style={{ color: "rgba(242,232,207,0.7)" }}>
             <li>
-              <a href="mailto:hello@theheatmap.co" className="hover:text-cayenne transition-colors hidden">
-                hello@theheatmap.co
-              </a>
+              
+
+              
             </li>
             <li>Nashville, TN 37203</li>
             <li>36.1627°N · 86.7816°W</li>
