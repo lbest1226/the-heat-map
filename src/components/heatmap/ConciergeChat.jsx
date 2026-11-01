@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 import { base44 } from "@/api/base44Client";
 import { Flame, X, Send, Loader2 } from "lucide-react";
 import MessageBubble from "./MessageBubble";
+import { buildChatPrompt } from "@/lib/hotChickenPrompt";
 
 const AGENT_NAME = "heat_concierge";
 
@@ -20,12 +20,34 @@ export default function ConciergeChat({ open, setOpen }) {
   const [loading, setLoading] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState(null);
+  const [signedIn, setSignedIn] = useState(null);
   const scrollRef = useRef(null);
   const inputRef = useRef(null);
 
+  // Visitors who are not signed in chat through the public endpoint
+  useEffect(() => {
+    let cancelled = false;
+    base44.auth
+      .isAuthenticated()
+      .then((authed) => {
+        if (!cancelled) setSignedIn(!!authed);
+      })
+      .catch(() => {
+        if (!cancelled) setSignedIn(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   // Create / resume a conversation when first opened
   useEffect(() => {
+    if (signedIn === null) return;
     if (!open || conversation) return;
+    if (!signedIn) {
+      setLoading(false);
+      return;
+    }
     let cancelled = false;
     setLoading(true);
     (async () => {
@@ -79,12 +101,25 @@ export default function ConciergeChat({ open, setOpen }) {
 
   const handleSend = async (text) => {
     const content = (text ?? input).trim();
-    if (!content || !conversation || sending) return;
+    if (!content || sending || signedIn === null) return;
+    if (signedIn && !conversation) return;
     setInput("");
     setSending(true);
-    setMessages((m) => [...m, { role: "user", content }]);
+    setError(null);
+    const next = [...messages, { role: "user", content }];
+    setMessages(next);
     try {
-      await base44.agents.addMessage(conversation, { role: "user", content });
+      if (conversation) {
+        await base44.agents.addMessage(conversation, { role: "user", content });
+      } else {
+        const answer = await base44.integrations.Core.InvokeLLM({
+          prompt: buildChatPrompt(next),
+        });
+        const reply = typeof answer === "string" ? answer.trim() : "";
+        if (!reply) throw new Error("No reply from the assistant");
+        setMessages((m) => [...m, { role: "assistant", content: reply }]);
+        setSending(false);
+      }
     } catch (e) {
       setSending(false);
       setError(e);
@@ -151,15 +186,16 @@ export default function ConciergeChat({ open, setOpen }) {
                   Line&rsquo;s down
                 </p>
                 <p className="label-mono mt-2" style={{ color: "rgba(242,232,207,0.5)" }}>
-                  Sign in to chat with the concierge.
+                  Give it another go in a moment.
                 </p>
-                <Link
-                  to="/login"
+                <button
+                  type="button"
+                  onClick={() => setError(null)}
                   className="inline-block mt-4 rounded-lg px-5 py-2.5 font-display text-sm uppercase"
                   style={{ background: "#FF4D00", color: "#0D0D0D" }}
                 >
-                  Sign in
-                </Link>
+                  Try again
+                </button>
               </div>
             ) : loading ? (
               <div className="flex items-center justify-center h-full">
