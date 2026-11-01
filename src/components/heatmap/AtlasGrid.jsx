@@ -11,15 +11,15 @@ export default function AtlasGrid() {
       {/* Section header */}
       <div className="mb-16 md:mb-20">
         <div className="flex items-baseline gap-4 mb-4">
-          <span className="label-mono hidden" style={{ color: "#FF4D00" }}>
-            02 / THE ATLAS OF HEAT
-          </span>
+          
+
+          
           <div className="flex-1 h-px" style={{ background: "#333" }} />
         </div>
         <MapBox />
-        <p className="mt-6 max-w-2xl text-lg hidden" style={{ color: "rgba(242,232,207,0.7)" }}>
-          Every Nashville hot chicken shrine, ranked by Scoville ferocity — from the origin point to the scorch-merchants, plotted across the city.
-        </p>
+        
+
+        
       </div>
 
       {/* Grid */}
