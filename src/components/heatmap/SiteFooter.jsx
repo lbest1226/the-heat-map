@@ -7,7 +7,7 @@ export default function SiteFooter() {
         {/* Brand */}
         <div>
           <h3 className="display-large leading-none" style={{ color: "#F2E8CF" }}>
-            FIND<br/><span style={{ color: "#FF4D00" }}>HOT</span><br/>CHICKEN
+            FIND<br /><span style={{ color: "#FF4D00" }}>HOT</span><br />CHICKEN
           </h3>
           <p className="label-mono mt-4 max-w-xs" style={{ color: "rgba(242,232,207,0.5)" }}>
             A Nashvillian's guide to hot chicken
@@ -15,7 +15,7 @@ export default function SiteFooter() {
         </div>
 
         {/* Navigate */}
-        <div>
+        <div className="hidden">
           <span className="label-mono block mb-4" style={{ color: "#FF4D00" }}>
             NAVIGATE
           </span>
@@ -33,7 +33,7 @@ export default function SiteFooter() {
           </span>
           <ul className="space-y-2 font-mono text-sm" style={{ color: "rgba(242,232,207,0.7)" }}>
             <li>
-              <a href="mailto:hello@theheatmap.co" className="hover:text-cayenne transition-colors">
+              <a href="mailto:hello@theheatmap.co" className="hover:text-cayenne transition-colors hidden">
                 hello@theheatmap.co
               </a>
             </li>
@@ -52,6 +52,6 @@ export default function SiteFooter() {
           BUILT ON GREASE & FIRE
         </span>
       </div>
-    </footer>
-  );
+    </footer>);
+
 }
