@@ -15,14 +15,22 @@ export default function Home() {
   return (
     <div id="top" className="relative">
       <CollageBackground images={COLLAGE_IMAGES} />
+      {/* Dark backdrop spanning the whole page */}
+      <div
+        className="fixed inset-0 z-0 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(13,13,13,0.55) 0%, rgba(13,13,13,0.32) 40%, rgba(13,13,13,0.88) 100%)",
+        }}
+      />
       <ScovilleAxis maxHeat={10} />
       <div className="lg:pl-12 relative z-10">
         <Hero onTalk={() => setChatOpen(true)} />
         <AtlasGrid />
         <Manifesto />
         <HeatMapSection />
-        <SiteFooter />
       </div>
+      <SiteFooter />
       <ConciergeChat open={chatOpen} setOpen={setChatOpen} />
     </div>
   );

@@ -7,7 +7,7 @@ export default function SiteFooter() {
         {/* Brand */}
         <div>
           <h3 className="display-large leading-none" style={{ color: "#F2E8CF" }}>
-            HEAT<br/><span style={{ color: "#FF4D00" }}>MAP</span><br/>NASHVILLE
+            FIND<br/><span style={{ color: "#FF4D00" }}>HOT</span><br/>CHICKEN
           </h3>
           <p className="label-mono mt-4 max-w-xs" style={{ color: "rgba(242,232,207,0.5)" }}>
             A Nashvillian's guide to hot chicken

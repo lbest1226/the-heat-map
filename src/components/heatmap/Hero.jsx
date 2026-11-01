@@ -6,13 +6,6 @@ export default function Hero({ onTalk }) {
       className="relative min-h-screen w-full overflow-hidden flex items-center justify-center"
       style={{ background: "transparent" }}>
       
-      {/* Scrim over the collage background for readability */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-          "linear-gradient(180deg, rgba(13,13,13,0.55) 0%, rgba(13,13,13,0.32) 40%, rgba(13,13,13,0.88) 100%)"
-        }} />
       
 
       <div className="relative z-20 px-6 max-w-5xl mx-auto text-center flex flex-col items-center">
